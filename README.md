@@ -14,3 +14,16 @@ and a lightweight inference app.
 ## Tech
 
 Python, pandas, scikit-learn
+
+
+## Data Ingestion
+
+This project acquires the dataset programmatically using the Kaggle API to ensure full reproducibility.
+
+```bash
+mkdir -p data/raw
+kaggle datasets download -d yeanzc/telco-customer-churn-ibm-dataset -p data/raw --unzip
+```
+
+The raw dataset is staged in `data/raw/` and is not committed to the repository.
+
