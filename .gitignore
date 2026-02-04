@@ -1,24 +1,52 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-
+# -------------------------
 # Virtual environments
+# -------------------------
 venv/
-.env/
+.venv/
+env/
+ENV/
+.env
 .envrc
 
-# Jupyter
-.ipynb_checkpoints
+# SSH / keys / secrets
+*.pem
+id_rsa
+id_ed25519
+*.key
 
+# -------------------------
+# Python cache
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -------------------------
+# Jupyter
+# -------------------------
+.ipynb_checkpoints/
+
+# -------------------------
 # VS Code
+# -------------------------
 .vscode/
 
-# Data files
+# -------------------------
+# Data & artifacts (DS/ML critical)
+# -------------------------
 data/
+artifacts/
+models/
 *.csv
 *.xlsx
+*.parquet
+*.feather
+*.pkl
+*.joblib
 
-# OS
+# -------------------------
+# OS junk
+# -------------------------
 .DS_Store
+Thumbs.db
+
