@@ -1,9 +1,12 @@
 # Churn Lifecycle & Retention Modeling
 
-End-to-end churn prediction project built around a reproducible data → model → artifact → app pipeline.
+Skills Demonstrated
+SQL · Feature Engineering · ML Pipelines · Data Validation · Model Evaluation · Experimentation Infrastructure
 
-This project demonstrates how a PostgreSQL analytics layer feeds a sklearn training pipeline which powers a
-lightweight Streamlit inference app.
+
+Production-style churn prediction system built with a full data engineering → feature store → ML training → artifact pipeline.
+
+This project demonstrates how a structured analytics layer can support reproducible model training, experiment tracking, and deployable inference workflows.
  
 ## Goals
 
@@ -15,6 +18,11 @@ lightweight Streamlit inference app.
 
 - Demonstrate an end-to-end DS/MLE workflow
 
+## Key Outcomes
+- Built relational data pipeline transforming raw CSV → analytics feature view
+- Designed reusable SQL feature layer for model training
+- Achieved reproducible training workflow with saved artifacts and metrics
+- Structured system to support future model comparison experiments
 
 ## Project Architecture
 
@@ -26,9 +34,12 @@ src/train.py (sklearn pipeline)
         ↓
 artifacts/model.joblib + metrics.json
         ↓
-Streamlit app (coming next)
+Streamlit app (planned)
 
-
+Design Decisions
+- Used database-level feature engineering instead of Python preprocessing to ensure consistency across training runs
+- Separated staging/core/analytics schemas to mimic production data warehouse patterns
+- Saved metrics + model artifacts to support benchmarking and experiment comparison
 
 ## Tech
 
